@@ -121,6 +121,29 @@
         .modal-body{
         overflow-y: scroll;
         }
+        header  form:focus-within{
+          outline: 3px solid  orange!important;
+           border-radius: 10px;
+           
+        }
+         .r_dropdown-menu{
+          height: 370px;
+          overflow-y: scroll;
+         }
+         .r_dropdown-menu li a:hover{
+          background-color:#1b66d2 ;
+          color:#fff ;
+         }
+         .r_dropdown-menu li a{
+          font-size: 0.8em;
+         }
+         .sprite{
+          width:18px ;
+          height :12px;
+           background-image: url("./img/Z8YwjOjqIHxqujG.png");
+           background-position:-18px -36px ;
+           background-repeat: no-repeat;
+         }
         
     
        </style>
@@ -228,14 +251,33 @@
             <div class="col-6 R_tbdr">
               <form class="row m-0 mt-2">
                 <div class="col-1 p-0">
-                  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <div class="btn-group"  role="group" aria-label="Button group with nested dropdown">
                     <div class="btn-group" role="group">
-                      <button type="button" class="btn btn-primary dropdown-toggle rounded-0 rounded-start" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button type="button" style="background-color: #D4D4D4 !important;" class=" btn btn-light dropdown-toggle rounded-0 rounded-start" data-bs-toggle="dropdown" aria-expanded="false">
                         All
                       </button>
-                      <ul class="dropdown-menu">
+                      <ul class="dropdown-menu r_dropdown-menu rounded-3">
                         <li><a class="dropdown-item" href="#">All text</a></li>
                         <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        <li><a class="dropdown-item" href="#">All text</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        <li><a class="dropdown-item" href="#">All text</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        <li><a class="dropdown-item" href="#">All text</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        <li><a class="dropdown-item" href="#">All text</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        <li><a class="dropdown-item" href="#">All text</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        <li><a class="dropdown-item" href="#">All text</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        <li><a class="dropdown-item" href="#">All text</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        <li><a class="dropdown-item" href="#">All text</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                        <li><a class="dropdown-item" href="#">All text</a></li>
+                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+
                       </ul>
                     </div>
                   </div>
@@ -243,15 +285,39 @@
                 <div class="col-10 p-0">
                   <input type="search" class="form-control col-8"/>
                 </div>
-                <div class="col-1 p-0">
-                  <button type="submit" class="btn btn-warning rounded-0 rounded-end ">
+                <div class="col-1 p-0 text-end">
+                  <button type="submit" class=" w-100 btn btn-warning rounded-0 rounded-end ">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 </div>
                 
               </form>
             </div>
-            <div class="col-3 R_tbdr">C</div>
+            <div class="col-3 R_tbdr">
+              <ul class="nav h-100">
+                <li class="nav-item">
+                  <a class="nav-link text-white" aria-current="page" href="#"><span class="sprite d-inline-block">
+
+                  </span>
+                    EN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">
+                    <span class="d-block position-relative" style="font-size: 0.7em;">Hello,Sine in</span>
+                    <span class="d-block position-relative fw-bold " style="font-size: 0.7em;">Account&Lists</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">
+                    <span class="d-block position-relative" style="font-size: 0.7em;">Returns</span>
+                    <span class="d-block position-relative fw-bold" style="font-size: 0.7em;">&Orders</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+                </li>
+              </ul>
+            </div>
            </div>
         </div>
         <div>
