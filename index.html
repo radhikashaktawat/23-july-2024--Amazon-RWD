@@ -144,8 +144,24 @@
            background-position:-18px -36px ;
            background-repeat: no-repeat;
          }
-        
-    
+         .R_submenu {
+          width: 220px;
+          height: 400px;
+          z-index: 1000;
+          top: 50px !important;
+          display: none;/*hide*/
+         }
+         .R_Menu > li:hover > ul{
+          display: block;/*show*/
+         }
+         .R_submenu2{
+          width: 440px;
+          left: -200px!important;
+         }
+         .R_submenu > li >a:hover,.R_ur_menu > li >a:hover{
+          color: orange !important;
+          text-decoration: underline;
+         }
        </style>
     </head>
   
@@ -294,23 +310,114 @@
               </form>
             </div>
             <div class="col-3 R_tbdr">
-              <ul class="nav h-100">
-                <li class="nav-item">
-                  <a class="nav-link text-white" aria-current="page" href="#"><span class="sprite d-inline-block">
-
-                  </span>
-                    EN</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#">
-                    <span class="d-block position-relative" style="font-size: 0.7em;">Hello,Sine in</span>
-                    <span class="d-block position-relative fw-bold " style="font-size: 0.7em;">Account&Lists</span>
+              
+              <ul class="nav h-100 R_Menu">
+                <li class="nav-item position-relative">
+                  <a class="nav-link text-white" aria-current="page" href="#"><span class="sprite d-inline-block"></span>
+                     EN<i class="fa-solid fa-caret-down text-light"></i>
                   </a>
+                  <ul class=" nav R_submenu position-absolute  top-0  start-0 bg-white rounded-1">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><input type="radio"/>English-EN</a>
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="nav-item position-relative">
+                  <a class="nav-link text-white" href="#">
+                    <span class="d-block position-relative" style="font-size: 0.6em;">Hello,Sine in</span>
+                    <span class="d-block position-relative fw-bold " style="font-size: 0.6em;">Account&Lists<i class="fa-solid fa-caret-down text-light"></i>
+                    </span>
+                  </a>
+                  <ul class=" nav R_submenu R_submenu2 position-absolute  top-0  start-0 bg-white rounded-1">
+                    <li class="nav-item h-25"></li>
+                    <li class="nav-item h-75">
+                      <div class="row m-0 h-100"> 
+
+                        <div class="col-6 p-0 R_tbdr ">
+                          <h5>Your Lists</h5>
+                          <ul class="nav flex-column R_ur_menu ">
+                          <li class="nav-item ms-3">
+                            <a class="nav-link active p-0" aria-current="page" href="#">Create Wish List</a>
+                          </li>
+                          <li class="nav-item ms-3">
+                            <a class="nav-link p-0" href="#">Wish Form Any Website</a>
+                          </li>
+                          <li class="nav-item ms-3">
+                            <a class="nav-link p-0" href="#">Baby Wishlist</a>
+                          </li>
+                          <li class="nav-item ms-3">
+                            <a class="nav-link p-0" href="#">Discover Your Style</a>
+                          </li>
+                          <li class="nav-item ms-3">
+                            <a class="nav-link p-0" href="#">Explore Showroom</a>
+                          </li>
+                        </ul>
+                        </div>
+                      <div class="col-6 p-0 R_tbdr ">
+                        <h5>Your Account</h5>
+                        <ul class="nav flex-column R_ur_menu ">
+                        <li class="nav-item ms-3 p-0">
+                          <a class="nav-link active p-0" aria-current="page" href="#">Your Account</a>
+                        </li>
+                        <li class="nav-item ms-3 p-0">
+                          <a class="nav-link p-0" href="#">Your Orders</a>
+                        </li>
+                        <li class="nav-item ms-3 p-0">
+                          <a class="nav-link p-0" href="#">Your Wishlist</a>
+                        </li>
+                        <li class="nav-item ms-3 p-0">
+                          <a class="nav-link p-0" href="#">Your Recommendations</a>
+                        </li>
+                        <li class="nav-item ms-3 p-0">
+                          <a class="nav-link p-0" href="#">Your Prime Membership</a>
+                        </li>
+                        <li class="nav-item ms-3 p-0">
+                          <a class="nav-link p-0" href="#">Your Prime Video</a>
+                        </li>
+                        <li class="nav-item ms-3 p-0">
+                          <a class="nav-link p-0" href="#">Your Subscribe & Save Items</a>
+                        </li>
+                        <li class="nav-item ms-3 p-0">
+                          <a class="nav-link p-0" href="#">Membership & Subscriptions</a>
+                        </li>
+                         
+                      </ul>
+                      </div>
+            
+                
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-white" href="#">
-                    <span class="d-block position-relative" style="font-size: 0.7em;">Returns</span>
-                    <span class="d-block position-relative fw-bold" style="font-size: 0.7em;">&Orders</span>
+                    <span class="d-block position-relative" style="font-size: 0.6em;">Returns</span>
+                    <span class="d-block position-relative fw-bold" style="font-size: 0.6em;">&Orders</span>
                   </a>
                 </li>
                 <li class="nav-item">
