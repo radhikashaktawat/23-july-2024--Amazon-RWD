@@ -162,6 +162,24 @@
           color: orange !important;
           text-decoration: underline;
          }
+         .R-_silder_control{
+          border:1px dashed  red;
+          height: 250px;
+          width: 84px;
+        
+         }
+         .R-_silder_control:active, .R-_silder_control:visited{
+          border: 3px solid #008296;
+          
+         }
+         .R_main2 > .row{
+          height: 421px;
+
+         }
+         .R_cc_main3{
+          width: 43px;
+          height: 100px;
+         }
        </style>
     </head>
   
@@ -352,8 +370,8 @@
                 </li>
                 <li class="nav-item position-relative">
                   <a class="nav-link text-white" href="#">
-                    <span class="d-block position-relative" style="font-size: 0.6em;">Hello,Sine in</span>
-                    <span class="d-block position-relative fw-bold " style="font-size: 0.6em;">Account&Lists<i class="fa-solid fa-caret-down text-light"></i>
+                    <span class="d-block position-relative" style="font-size: 0.5em;">Hello,Sine in</span>
+                    <span class="d-block position-relative fw-bold " style="font-size: 0.5em;">Account&Lists<i class="fa-solid fa-caret-down text-light"></i>
                     </span>
                   </a>
                   <ul class=" nav R_submenu R_submenu2 position-absolute  top-0  start-0 bg-white rounded-1">
@@ -411,13 +429,11 @@
                          
                       </ul>
                       </div>
-            
-                
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-white" href="#">
-                    <span class="d-block position-relative" style="font-size: 0.6em;">Returns</span>
-                    <span class="d-block position-relative fw-bold" style="font-size: 0.6em;">&Orders</span>
+                    <span class="d-block position-relative" style="font-size: 0.5sem;">R</span>
+                    <span class="d-block position-relative fw-bold" style="font-size: 0.6em;">&O</span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -475,7 +491,7 @@
     </header>
     <main class=" R_tbdr">
         <div class="container-fluid"> 
-             <div class="R_main1 R_tbdr">
+             <div class="R_main1 R_tbdr position-relative" style="z-index: 1000;">
                 <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -503,52 +519,166 @@
                         <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Beauty/July/TBS/Updated/PC-3._CB567493886_.jpg" class="d-block w-100" alt="...">
                       </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <button class=" carousel-control-prev R-_silder_control" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <button class="carousel-control-next  R-_silder_control" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
              </div>
-            <div class="R_main2 R_tbdr">
-                main 2 </div>
-                <div class="R_main3 R_tbdr">
-                    main 3</div>
-                    <div class="R_main4 R_tbdr">
-                        main 4</div>
-                        <div class="R_main5 R_tbdr">
-                            main 5</div>
-                            <div class="R_main6 R_tbdr">
-                                main 6</div>
-                                <div class="R_main7 R_tbdr">
-                                    main 7</div>
-                                    <div class="R_main8 R_tbdr">
-                                        <div class="row h-100"> 
-                                            <div class="col-8 R_tbdr offset-2 h-100 bg-white">main8</div>
+             <div class="R_tbdr ps-3 pe-3 R_mainBottomcontainer position-relative" style="z-index: 2000";> 
+               <div class="R_main2 R_tbdr">
+                <div class="row  m-0">
+                  <div class="col p-0 pe-2 ">
+                    <div class="bg-white h-100">A</div>
+                  </div>
+                  <div class="col ps-2 pe-2 R_tbdr ">
+                     <div class="bg-white h-100">B</div>
+                </div>
+                  <div class="col ps-2 pe-2 R_tbdr "> 
+                    <div class="bg-white h-100">c</div>
+                  </div>
+                  <div class="col ps-2 pe-0 R_tbdr "> 
+                    <div class="bg-white h-50 mb-3">d</div>
+                <div class="bg-white h-25 " style="height: 193px !important;">d2</div>
+                </div>
+              </div>
+                </div>
+               
+              <div class="R_main3 R_tbdr">
+                <div id="carouselExample2" class="carousel slide h-100">
+                  <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                      <div class="w-100 h-100 bg-danger">
+                        <div class="row m-0 h-100">
+                          <div class="col p-0  h-100 R_tbdr">a</div>
+                          <div class="col p-0  h-100 R_tbdr">b</div>
+                          <div class="col p-0 h-100 R_tbdr">c</div>
+                          <div class="col p-0 h-100 R_tbdr">d</div>
+                          <div class="col p-0 h-100 R_tbdr">e</div>
+                          <div class="col p-0 h-100 R_tbdr">f</div>
+                          <div class="col p-0 h-100 R_tbdr">g</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item h-100">
+                       <div class="w-100 h-100 bg-primary">
+                        <div class="row m-0 h-100">
+                          <div class="col p-0  h-100 R_tbdr">a</div>
+                          <div class="col p-0  h-100 R_tbdr">b</div>
+                          <div class="col p-0 h-100 R_tbdr">c</div>
+                          <div class="col p-0 h-100 R_tbdr">d</div>
+                          <div class="col p-0 h-100 R_tbdr">e</div>
+                          <div class="col p-0 h-100 R_tbdr">f</div>
+                          <div class="col p-0 h-100 R_tbdr">g</div>
+                        </div></div>
+                    </div>
+                    <div class="carousel-item h-100">
+                      <div class="w-100 h-100 bg-warning">
+                          <div class="row m-0 h-100">
+                            <div class="col p-0  h-100 R_tbdr">a</div>
+                            <div class="col p-0  h-100 R_tbdr">b</div>
+                            <div class="col p-0 h-100 R_tbdr">c</div>
+                            <div class="col p-0 h-100 R_tbdr">d</div>
+                            <div class="col p-0 h-100 R_tbdr">e</div>
+                            <div class="col p-0 h-100 R_tbdr">f</div>
+                            <div class="col p-0 h-100 R_tbdr">g</div>
+                          </div>
+                  </div>
+                  </div>
+                  <button class="carousel-control-prev R_cc_main3 bg-white rounded-end top-50 start-25 translate-middle-y shadow-sm" style="opacity: 1;" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                    <i class="fa-solid fa-chevron-left text-body-tertiary fs-3"></i>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next R_cc_main3 bg-white rounded-start top-50 end-25 translate-middle-y shadow-sm" style="opacity: 1;"  type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                    <i class="fa-solid fa-chevron-right text-body-tertiary fs-3"></i>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                </div>
+              </div>
+                  <div class="R_main4 R_tbdr">
+                      main 4 <div id="carouselExample3" class="carousel slide" style="height: 282px !important;">
+                        <div class="carousel-inner h-100">
+                          <div class="carousel-item active h-100">
+                            <div class="w-100 h-100 bg-info">
+                              <div class="row m-0 h-100">
+                                <div class="col p-0 R_tbdr">a</div>
+                                <div class="col p-0  h-100 R_tbdr">b</div>
+                                <div class="col p-0 h-100 R_tbdr">c</div>
+                                <div class="col p-0 h-100 R_tbdr">d</div>
+                                <div class="col p-0 h-100 R_tbdr">e</div>
+                                <div class="col p-0 h-100 R_tbdr">f</div>
+                                <div class="col p-0 h-100 R_tbdr">g</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                             <div class="w-100 h-100 bg-secondary">
+                              <div class="row m-0 h-100">
+                                <div class="col p-0  h-100 R_tbdr">a</div>
+                                <div class="col p-0  h-100 R_tbdr">b</div>
+                                <div class="col p-0 h-100 R_tbdr">c</div>
+                                <div class="col p-0 h-100 R_tbdr">d</div>
+                                <div class="col p-0 h-100 R_tbdr">e</div>
+                                <div class="col p-0 h-100 R_tbdr">f</div>
+                                <div class="col p-0 h-100 R_tbdr">g</div>
+                              </div></div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <div class="w-100 h-100 bg-success">
+                                <div class="row m-0 h-100">
+                                  <div class="col p-0  h-100 R_tbdr">a</div>
+                                  <div class="col p-0  h-100 R_tbdr">b</div>
+                                  <div class="col p-0 h-100 R_tbdr">c</div>
+                                  <div class="col p-0 h-100 R_tbdr">d</div>
+                                  <div class="col p-0 h-100 R_tbdr">e</div>
+                                  <div class="col p-0 h-100 R_tbdr">f</div>
+                                  <div class="col p-0 h-100 R_tbdr">g</div>
+                                </div>
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev R_cc_main3 bg-white rounded-end top-50 start-25 translate-middle-y shadow-sm" style="opacity: 1;" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                          <i class="fa-solid fa-chevron-left text-body-tertiary fs-3"></i>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next R_cc_main3 bg-white rounded-start top-50 end-25 translate-middle-y shadow-sm" style="opacity: 1;"  type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                          <i class="fa-solid fa-chevron-right text-body-tertiary fs-3"></i>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      </div>
+                    </div></div>
+                      <div class="R_main5 R_tbdr"> 
+                             main5
+                        </div>
+                          <div class="R_main6 R_tbdr">
+                              main 6</div>
+                              <div class="R_main7 R_tbdr">
+                                  main 7</div>
+                                  <div class="R_main8 R_tbdr">
+                                      <div class="row h-100"> 
+                                          <div class="col-8 R_tbdr offset-2 h-100 bg-white">main8</div>
+                                      </div>
+                                  </div>
+                                    <div class="R_main9 R_tbdr">
+                                        main 9</div>
+                                        <div class="R_main10 R_tbdr">
+                                          main 10</div>
+                                          <div class="R_main11 R_tbdr">
+                                              main 11</div>
+                                              <div class="R_main12 R_tbdr">
+                                                  main 12</div>
+                                                  <div class="R_main13 R_tbdr">
+                                                      main 13</div>
                                         </div>
-                                    </div>
-                                      <div class="R_main9 R_tbdr">
-                                          main 9</div>
-                                          <div class="R_main10 R_tbdr">
-                                            main 10</div>
-                                            <div class="R_main11 R_tbdr">
-                                                main 11</div>
-                                                <div class="R_main12 R_tbdr">
-                                                    main 12</div>
-                                                    <div class="R_main13 R_tbdr">
-                                                        main 13</div>
-                                          </div>
-                                        
-                                                <div class="R_main_last R_tbdr bg-white">
+                                      
+                                        <div class="R_main_last R_tbdr bg-white">
                                                     main last container
-                                                </div>
-                                       
-                           
-                   
-    
+                                                  </div>
     </main>
     <footer class="text-white">
         <div class="">A</div>
