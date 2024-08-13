@@ -18,11 +18,11 @@
             
         }
         header >  div:first-child{
-            height: 60px;
+           min-height: 60px;
             background-color: #131921;
         }
         header >  div:last-child{
-            height: 38px;
+            min-height: 38px;
             background-color: #232f3e;
         }
         main{ 
@@ -52,33 +52,34 @@
         
         }
         .R_main2{
-            height: 432px !important;
+           height: 432px !important;
         }
         .R_main3{
-            height:303px ;
+           height:303px ;
         }
-        .R_main4{
-            height: 308px;
+        
+        .main4 >div.row >div{
+          min-height: 310px;
         }
         .R_main5{
-            height:440px ;
+          min-height:440px ;
         }
         .R_main6,.R_main7{
-            height:307px ;
+         min-height:307px ;
         }
         .R_main8{
-            height:276px ;
+            min-height:307px ;
         }
         .R_main9{
-            height: 433px;
+           min-height: 433px;
         }
         .R_main10{
-            height: 286px;
+            min-height: 286px;
         }
         .R_main11{
-            height: 328px;
+            min-height: 328px;
         }.R_main12{
-            height: 426px;
+           height: 426px;
         }
         .R_main13{
             height: 289px;
@@ -86,7 +87,7 @@
          
          
         .R_main_last{
-            height: 191px;
+           min-height: 191px;
         }
         .R_footer_c1{
             height: 160px;
@@ -105,11 +106,13 @@
         border-radius: 4px;
         }
         .modal-content{
-            top: -28px !important;
-            left: -100%;
-            height: 760%;
+          position: absolute !important;
+          left: 0px;
+          right: 0px;
+            height: 760px;
             width: 76%;
             border-radius: 0px;
+        
             
             
         }
@@ -120,6 +123,8 @@
         }
         .modal-body{
         overflow-y: scroll;
+        background-color:#fff;
+        
         }
         header  form:focus-within{
           outline: 3px solid  orange!important;
@@ -147,9 +152,9 @@
          .R_submenu {
           width: 220px;
           height: 400px;
-          z-index: 1000;
+          z-index: 10000 !important;
           top: 50px !important;
-          display: none;/*hide*/
+          display:none;/*hide*/
          }
          .R_Menu > li:hover > ul{
           display: block;/*show*/
@@ -163,7 +168,7 @@
           text-decoration: underline;
          }
          .R-_silder_control{
-          border:1px dashed  red;
+          border:1px dashed  red; 
           height: 250px;
           width: 84px;
         
@@ -174,22 +179,43 @@
          }
          .R_main2 > .row{
           height: 421px;
+          
 
          }
          .R_cc_main3{
           width: 43px;
           height: 100px;
          }
+         .modal{
+          z-index: 10000;
+         }
+         @media  only screen and(max-width:576px) {
+          .header >div:first-child{
+            background-color: #232F3E;
+          }
+          form.mt-2{
+            margin-top: 0px !important;
+          }
+          header ul li:hover{
+            border: none;
+            border-radius: 0px;}
+         }
+         @media only screen and (min-width: 576px){
+          .header_bottom >ul{
+            display: inline-block;
+          }
+          
+         }
        </style>
     </head>
   
    <body>
      <!-- Modal -->
-     <div class="modal  " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
+     <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog m-0">
       <div class="modal-content text-white">
         <div class="modal-header">
-          <h1 class="modal-title fs-5 ps-5" id="staticBackdropLabel"> 
+          <h1 class="modal-title fs-5 ps-5" id="exampleModalLabel"> 
             <i><i class="fa-solid fa-user text-white"></i></i> Hello,sing in</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -263,17 +289,20 @@
     </div>
   </div>
     <header>
-        <div>
+        <div class="header top">
            <div class="row m-0 h-100">
-            <div class="col-3 R_tbdr">
-              <ul class="nav h-100">
+            <div class="col-12  col-sm-12 col-md-3 R_tbdr">
+              <ul class="nav h-100 r_menu d-none d-sm-inline-block">
               <li class="nav-item mt-1 mb-1">
-                <a class="nav-link active p-1" aria-current="page" href="#">
+                <button class="btn d-block d-sm-none float-start clearfix" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <i class="fa-solid fa-bars text-white fs-3"></i>
+                </button>
+                <a class="float-start nav-link active p-1" aria-current="page" href="#">
                   <img width="114" class="img-fluid" src="./img/png.1.png "/>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white p-0 ps-3 pe-3" href="#">
+              <li class="nav-item d-lg-flex">
+                <a class="nav-link text-white p-0 ps-3 pe-3 d-none d-sm-block" href="#">
                   <span class="d-block position-relative" style="font-size: .8em; top:8px"> Delivery to Bhopal 34568</span>
                   <span class="d-block fw-bold position-relative">
                     <i class="fa-solid fa-location-dot position-absolute" style="left:-15px; font-size: 1.1em;"></i>  Updated location</span>
@@ -282,7 +311,7 @@
                
             </ul>
           </div>
-            <div class="col-6 R_tbdr">
+            <div class="col-12 col-sm-12 col-md-6 R_tbdr">
               <form class="row m-0 mt-2">
                 <div class="col-1 p-0">
                   <div class="btn-group"  role="group" aria-label="Button group with nested dropdown">
@@ -327,9 +356,9 @@
                 
               </form>
             </div>
-            <div class="col-3 R_tbdr">
+            <div class="col-12  col-sm-12 col-md-3 R_tbdr">
               
-              <ul class="nav h-100 R_Menu">
+              <ul class="nav h-100 R_menu d-none d-md-block d-lg-flex">
                 <li class="nav-item position-relative">
                   <a class="nav-link text-white" aria-current="page" href="#"><span class="sprite d-inline-block"></span>
                      EN<i class="fa-solid fa-caret-down text-light"></i>
@@ -367,19 +396,28 @@
                     </li>
 
                   </ul>
+                  
                 </li>
+                
                 <li class="nav-item position-relative">
                   <a class="nav-link text-white" href="#">
                     <span class="d-block position-relative" style="font-size: 0.5em;">Hello,Sine in</span>
                     <span class="d-block position-relative fw-bold " style="font-size: 0.5em;">Account&Lists<i class="fa-solid fa-caret-down text-light"></i>
                     </span>
-                  </a>
-                  <ul class=" nav R_submenu R_submenu2 position-absolute  top-0  start-0 bg-white rounded-1">
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-white" href="#">
+                     <span class="d-block position-relative" style="font-size: 0.5sem;">R</span>
+                     <span class="d-block position-relative fw-bold" style="font-size: 0.6em;">&O</span></a>
+                     <a class="nav-link text-white" href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+                   
+                 </li>
+                  
+                   <ul class=" nav R_submenu R_submenu2 position-absolute  top-0  start-0 bg-white rounded-1">
                     <li class="nav-item h-25"></li>
                     <li class="nav-item h-75">
                       <div class="row m-0 h-100"> 
-
-                        <div class="col-6 p-0 R_tbdr ">
+                          <div class="col-6 p-0 R_tbdr ">
                           <h5>Your Lists</h5>
                           <ul class="nav flex-column R_ur_menu ">
                           <li class="nav-item ms-3">
@@ -401,7 +439,7 @@
                         </div>
                       <div class="col-6 p-0 R_tbdr ">
                         <h5>Your Account</h5>
-                        <ul class="nav flex-column R_ur_menu ">
+                        <ul class="nav flex-column R_ur_menu d-lg-flex ">
                         <li class="nav-item ms-3 p-0">
                           <a class="nav-link active p-0" aria-current="page" href="#">Your Account</a>
                         </li>
@@ -429,22 +467,30 @@
                          
                       </ul>
                       </div>
+                     
+                     </ul>
+                     
+  
+                       
+               
+                 <ul class="nav d-md-none text-white">
+                  <a class="nav-link active text-white" aria-current="page" href="#">Shop By Category</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#">
-                    <span class="d-block position-relative" style="font-size: 0.5sem;">R</span>
-                    <span class="d-block position-relative fw-bold" style="font-size: 0.6em;">&O</span>
-                  </a>
+                  <a class="nav-link text-white" href="#">Your Lists</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+                  <a class="nav-link text-white" href="#">Deals</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white">Sell</a>
                 </li>
               </ul>
             </div>
            </div>
         </div>
-        <div>
-            <ul class="nav">
+        <div class="header bottom">
+            <ul class="nav d-none d-sm-none d-md-none d-lg-flex">
                 <li class="nav-item">
                   <a class="nav-link text-white active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                      <i class="fa-solid fa-bars"></i> All</a>
@@ -487,9 +533,10 @@
                   </li>
                  
               </ul>
+              <a href="#" class=" d-block d-sm-none text-white text-decoration-none btn"><i class="fa-solid fa-location-dot"></i>Delivery to Bhopal 45678-Updated-location<i class="fa-solid fa-chevron-down"></i></a>
         </div>
     </header>
-    <main class=" R_tbdr">
+    <main class=" R_tbdr"> 
         <div class="container-fluid"> 
              <div class="R_main1 R_tbdr position-relative" style="z-index: 1000;">
                 <div id="carouselExample" class="carousel slide">
@@ -530,25 +577,27 @@
                   </div>
              </div>
              <div class="R_tbdr ps-3 pe-3 R_mainBottomcontainer position-relative" style="z-index: 2000";> 
-               <div class="R_main2 R_tbdr">
-                <div class="row  m-0">
-                  <div class="col p-0 pe-2 ">
+               <div class="R_main2 ">
+                 <div class="row m-0 h-100">
+                  <div class="col ps-0 pe-2">
                     <div class="bg-white h-100">
-                      
+                      <a href="#">
+                        <img class="w-75" src="https://m.media-amazon.com/images/I/4174CfbPwRL._MCnd_AC_.jpg"/>
+                      </a>
                     </div>
                   </div>
-                  <div class="col ps-2 pe-2 R_tbdr ">
-                     <div class="bg-white h-100">B</div>
-                </div>
-                  <div class="col ps-2 pe-2 R_tbdr "> 
-                    <div class="bg-white h-100">c</div>
+                  <div class="col ps-2 pe-2">
+                    <div class="bg-white h-100"></div>
                   </div>
-                  <div class="col ps-2 pe-0 R_tbdr "> 
+                  <div class="col ps-2 pe-2">
+                    <div class="bg-white h-100"></div>
+                  </div>
+                     <div class="col ps-2 pe-0 h-100 R_tbdr "> 
                     <div class="bg-white h-50 mb-3">d</div>
                 <div class="bg-white h-25 " style="height: 193px !important;">d2</div>
-                </div>
+                  </div>
               </div>
-                </div>
+               </div></div>
                
               <div class="R_main3 R_tbdr">
                 <div id="carouselExample2" class="carousel slide h-100" data-bs-ride="carousel">
@@ -656,53 +705,215 @@
                 </div>
                 </div>
               </div>
-                  <div class="R_main4 ">
-                      main 4 <div id="carouselExample3" class="carousel slide" style="height: 282px !important;" data-bs-ride="carousel">
+                  <div class="R_main4 ">Blockbuster deals
+                    <div class="row  bg-white rounded-3 shadow-lg  d-sm-none">
+                      <div class="col-6 text-center p-3 pb-5 position-relative ">
+                        <a href="#" class="text-decoration-none">
+                          <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">83% Off</span>
+                          <img class="w-100 img-fluid" src="https://m.media-amazon.com/images/I/61-SNkMcaqL._SX569_.jpg"/>
+                          <div class="mt-2">
+                            <span class="bg-danger text-white p-1 rounded-1">83% Off</span>
+                            <small class="text-danger">Great Freedome sell</small>
+                          </div>
+                          <div class="text-start">
+                            <span class="text-black">5,079</span>
+                          </div>
+                          <div class="text-start">
+                           <span class="text-decoration-line-through text-black"> M.R.P 33,335</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class=" col-6 text-center p-3 pb-5 position-relative"><a href="#">
+                        <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">27% Off</span>
+                        <img class="w-100 img-fluid" src="https://m.media-amazon.com/images/I/41HaxHdIjjL._SR480,440_.jpg"/>
+                      </a> <div class="mt-2">
+                        <span class="bg-danger text-white p-1 rounded-1">27% Off</span>
+                        <small class="text-danger">Great Freedome sell</small>
+                      </div>
+                      <div class="text-start">
+                        <span class="text-black">35,990</span>
+                      </div>
+                      <div class="text-start">
+                       <span class="text-decoration-line-through text-black"> M.R.P 48,998.00</span>
+                      </div></div>
+                      <div class=" col-6 text-center p-3 pb-5 position-relative"><a href="#">
+                        <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">26% Off</span>
+                        <img class="w-100 img-fluid" src="https://m.media-amazon.com/images/I/41eRbZPyRqL._SR480,440_.jpg "/>
+                      </a> <div class="mt-2">
+                        <span class="bg-danger text-white p-1 rounded-1">26% Off</span>
+                        <small class="text-danger">Great Freedome sell</small>
+                      </div>
+                      <div class="text-start">
+                        <span class="text-black">61,400</span>
+                      </div>
+                      <div class="text-start">
+                       <span class="text-decoration-line-through text-black"> M.R.P 82,590.00</span>
+                      </div></div>
+                      <div class=" col-6 text-center p-3 pb-5 position-relative"><a href="#">
+                        <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">36% Off</span>
+                        <img class="w-100 img-fluid" src=" https://m.media-amazon.com/images/I/41A8MP9gFAL._SR480,440_.jpg"/>
+                      </a> <div class="mt-2">
+                        <span class="bg-danger text-white p-1 rounded-1">36% Off</span>
+                        <small class="text-danger">Great Freedome sell</small>
+                      </div>
+                      <div class="text-start">
+                        <span class="text-black">29,299</span>
+                      </div>
+                      <div class="text-start">
+                       <span class="text-decoration-line-through text-black"> M.R.P 48,54.00</span>
+                      </div></div>
+                      <div class=" col-6 text-center p-3 pb-5 position-relative"><a href="#">
+                        <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">35% Off</span>
+                        <img class="w-100 img-fluid" src="https://m.media-amazon.com/images/I/31Wen6gm2JL._SR480,440_.jpg "/>
+                      </a> <div class="mt-2">
+                        <span class="bg-danger text-white p-1 rounded-1">35% Off</span>
+                        <small class="text-danger">Great Freedome sell</small>
+                      </div>
+                      <div class="text-start">
+                        <span class="text-black">49,990</span>
+                      </div>
+                      <div class="text-start">
+                       <span class="text-decoration-line-through text-black"> M.R.P 76,990.00</span>
+                      </div></div>
+                      <div class=" col-6 text-center p-3 pb-5 position-relative"><a href="#">
+                        <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">37% Off</span>
+                        <img class="w-100 img-fluid" src="https://m.media-amazon.com/images/I/31Wen6gm2JL._SR480,440_.jpg "/>
+                      </a> <div class="mt-2">
+                        <span class="bg-danger text-white p-1 rounded-1">37% Off</span>
+                        <small class="text-danger">Great Freedome sell</small>
+                      </div>
+                      <div class="text-start">
+                        <span class="text-black">36,990</span>
+                      </div>
+                      <div class="text-start">
+                       <span class="text-decoration-line-through text-black"> M.R.P 58,390.00</span>
+                      </div></div>
+                      <div class=" col-6 text-center p-3 pb-5 position-relative"><a href="#">
+                        <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">40% Off</span>
+                        <img class="w-100 img-fluid" src="https://m.media-amazon.com/images/I/4143CSktumL._SR480,440_.jpg"/>
+                      </a> <div class="mt-2">
+                        <span class="bg-danger text-white p-1 rounded-1">40% Off</span>
+                        <small class="text-danger">Great Freedome sell</small>
+                      </div>
+                      <div class="text-start">
+                        <span class="text-black">33,330</span>
+                      </div>
+                      <div class="text-start">
+                       <span class="text-decoration-line-through text-black"> M.R.P 56,343</span>
+                      </div></div>
+                      <div class="col-6 text-center p-3 pb-5 position-relative ">
+                        <a href="#" class="text-decoration-none">
+                          <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">83% Off</span>
+                          <img class="w-100 img-fluid" src="https://m.media-amazon.com/images/I/61-SNkMcaqL._SX569_.jpg"/>
+                          <div class="mt-2">
+                            <span class="bg-danger text-white p-1 rounded-1">83% Off</span>
+                            <small class="text-danger">Great Freedome sell</small>
+                          </div>
+                          <div class="text-start">
+                            <span class="text-black">5,079</span>
+                          </div>
+                          <div class="text-start">
+                           <span class="text-decoration-line-through text-black"> M.R.P 33,335</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-6 text-center p-3 pb-5 position-relative">
+                        <a href="#" class="text-decoration-none">
+                          <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">79% Off</span>
+                          <img class="w-100 img-fluid" src=" https://m.media-amazon.com/images/I/41w-qUEfTNL._SR480,440_.jpg"/>
+                          <div class="mt-2 text-start">
+                            <span class="bg-danger text-white p-1 rounded-1">79% Off</span>
+                            <small class="text-danger">Great Freedome sell</small>
+                          </div>
+                          <div class="text-start">
+                            <span class="text-black">6,199</span>
+                          </div>
+                          <div class="text-start">
+                           <span class="text-decoration-line-through text-black"> M.R.P 29,000</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-6 text-center p-3 pb-5 position-relative">
+                        <a href="#" class="text-decoration-none">
+                          <span class="badge text-bg-danger rounded-circle d-block position-absolute top-0 start-0 text-center" style="height: 50px; width: 50px;line-height: 50px; font-size:10px;">80% Off</span>
+                          <img class="w-100 img-fluid" src=" https://m.media-amazon.com/images/I/41Peg4pz7fL._SR480,440_.jpg"/>
+                          <div class="mt-2">
+                            <span class="bg-danger text-white p-1 rounded-1">80% Off</span>
+                            <small class="text-danger">Great Freedome sell</small>
+                          </div>
+                          <div class="text-start">
+                            <span class="text-black">9,990</span>
+                          </div>
+                          <div class="text-start">
+                           <span class="text-decoration-line-through text-black"> M.R.P 4,990</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                       <div id="carouselExample3" class="carousel slide h-100" data-bs-ride="carousel d-none d-sm-block">
                         <div class="carousel-inner h-100" >
                           <div class="carousel-item active h-100"data-bs-interval="3000" >
                             <div class="w-100 h-100 bg-white">
                               <div class="row m-0 h-100">
-                                <div class="col p-0 ">
+                                <div class="  h-100 col p-0 ">
                                   <a href="#">
-                                    <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/01._CB568095632_.jpg"/>
+                                    <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/61-SNkMcaqL._SX569_.jpg"/>
                                   </a>
                                 </div>
-                                <div class="col p-0  h-100 "><a href="#">
-                                  <img class="h-100" src=""/>
+                                <div class="h-100 col p-0 h-100 "><a href="#">
+                                  
+                                  <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/41HaxHdIjjL._SR480,440_.jpg"/>
                                 </a></div>
                                 <div class="col p-0 h-100"><a href="#">
-                                  <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/03._CB568095632_.jpg"/>
+                                  
+                                  <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/41eRbZPyRqL._SR480,440_.jpg  "/>
                                 </a></div>
                                 <div class="col p-0 h-100"><a href="#">
-                                  <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/05._CB568095632_.jpg"/>
+                                  
+                                  <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/41A8MP9gFAL._SR480,440_.jpg "/>
                                 </a></div>
                                 <div class="col p-0 h-100"><a href="#">
-                                  <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/06._CB568095632_.jpg"/>
+                                  
+                                  <img class="h-100 img-fluid "src="https://m.media-amazon.com/images/I/31Wen6gm2JL._SR480,440_.jpg "/>
                                 </a></div>
                                 <div class="col p-0 h-100"><a href="#">
-                                  <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/04._CB568095632_.jpg"/>
+                                  
+                                  <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/4143CSktumL._SR480,440_.jpg "/>
                                 </a></div>
                                 <div class="col p-0 h-100"><a href="#">
-                                  <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/07._CB568095632_.jpg"/>
+                                  
+                                  <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/4143CSktumL._SR480,440_.jpg "/>
                                 </a></div>
                               </div>
                             </div>
                           </div>
                           <div class="carousel-item h-100"data-bs-interval="3000">
-                             <div class="w-100 h-100 bg-white">
+                             <div class="w-100 bg-white h-100" >
                               <div class="row m-0 h-100">
                                 <div class="col p-0  h-100 "><a href="#">
-                                  <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/04._CB568095632_.jpg"/>
+                                  <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/31Tz8DcmevL._SR480,440_.jpg "/>
                                 </a></div>
                                 <div class="col p-0  h-100 "><a href="#">
-                                  <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/07._CB568095632_.jpg"/>
+                                  <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/314kVw1vC6L._SR480,440_.jpg "/>
                                 </a></div>
                                 <div class="col p-0 h-100 "><a href="#">
-                                       <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/09AA_1._CB568095248_.jpg"/>
+                                       <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/31qx8K0wm+L._SR480,440_.jpg "/>
                                 </a></div>
                                 <div class="col p-0 h-100 "><a href="#">
-                                  <img class="h-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/08._CB568095632_.jpg"/>
+                                  <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/31Duuwk6oXL._SR480,440_.jpg "/>
                            </a></div>
+                           <div class="col p-0 h-100 "><a href="#">
+                            <img class="h-100 img-fluid" src=" https://m.media-amazon.com/images/I/41Peg4pz7fL._SR480,440_.jpg "/>
+                     </a></div>
+                     <div class="col p-0 h-100 "><a href="#">
+                      <img class="h-100 img-fluid" src=" https://m.media-amazon.com/images/I/41w-qUEfTNL._SR480,440_.jpg"/>
+               </a></div>
+               <div class="col p-0 h-100 "><a href="#">
+                <img class="h-100 img-fluid" src=" https://m.media-amazon.com/images/I/417kXe3GNmL._SR480,440_.jpg "/>
+         </a></div>
+         <div class="col p-0 h-100 "><a href="#">
+          <img class="h-100 img-fluid" src="https://m.media-amazon.com/images/I/41fxUclkC3L._SR480,440_.jpg "/>
+   </a></div>
                               </div> </div>
                           </div>
                                
@@ -808,36 +1019,36 @@
                                   <div id="carouselExample7" class="carousel slide h-100" data-bs-ride="carousel">
                                     <div class="carousel-inner h-100">
                                       <div class="carousel-item active h-100" data-bs-interval="3000">
-                                        <div class="w-100 h-100 bg-white">
+                                        <div class=" h-100 bg-white">
                                           <div class="row m-0 h-100">
                                             <div class="col p-0 h-100  text-center">
                                               <a href="#">
-                                                <img class="h-100"src=" https://m.media-amazon.com/images/I/81r6KIx6YyL._AC_SY200_.jpg"/>
+                                                <img  style="height:250px;" src="https://m.media-amazon.com/images/I/51FF5ZTyoyL._AC_SY200_.jpg "/>
                                               </a>
                                             </div>
                                             <div class="col p-0  h-100  text-center">
                                               <a href="#">
-                                                <img class="h-100"src="https://m.media-amazon.com/images/I/51FF5ZTyoyL._AC_SY200_.jpg " />
+                                                <img style="height:250px;" src="https://m.media-amazon.com/images/I/51FF5ZTyoyL._AC_SY200_.jpg "/>
                                           </a>
                                         </div>
                                             <div class="col p-0 h-100 text-center">
                                               <a href="#">
-                                                <img class="h-100"src="https://m.media-amazon.com/images/I/51246OdUzZL._AC_SY200_.jpg "/>
+                                                <img style="height:250px;" src="https://m.media-amazon.com/images/I/51246OdUzZL._AC_SY200_.jpg "/>
                                               </a>
                                             </div>
                                             <div class="col p-0 h-100 text-center">
                                               <a href="#">
-                                                <img class="h-100"src="https://m.media-amazon.com/images/I/41f1taZCyUL._AC_SY200_.jpg "/>
+                                                <img style="height:250px;" src="https://m.media-amazon.com/images/I/41f1taZCyUL._AC_SY200_.jpg "/>
                                               </a>
                                             </div>
                                             <div class="col p-0 h-100 text-center">
                                               <a href="#">
-                                                <img  class="h-100" src=" https://m.media-amazon.com/images/I/41NtevgF4+L._AC_SY200_.jpg"/>
+                                                <img  style="height:250px;" src=" https://m.media-amazon.com/images/I/41NtevgF4+L._AC_SY200_.jpg"/>
                                               </a>
                                             </div>
                                             <div class="col p-0 h-100 text-center">
                                               <a href="#">
-                                                <img class="h-100" src="https://m.media-amazon.com/images/I/51tVPK5ZsxL._AC_SY200_.jpg "/>
+                                                <img style="height:250px;" src="https://m.media-amazon.com/images/I/51tVPK5ZsxL._AC_SY200_.jpg "/>
                                               </a>
                                             </div>
                                              
@@ -845,36 +1056,36 @@
                                         </div>
                                       </div>
                                       <div class="carousel-item h-100" data-bs-interval="3000">
-                                         <div class="w-100 h-100 bg-white">
+                                         <div class="w-100 h-100  bg-white">
                                           <div class="row m-0 h-100">
-                                            <div class="col p-0  h-100 text-center">
+                                            <div class="col p-0 h-100 text-center">
                                               <a href="#">
-                                                <img  class="h-100" src=" https://m.media-amazon.com/images/I/41yTVMm1DoL._AC_SY200_.jpg"/>  
+                                                <img  style="height: 250px;" src=" https://m.media-amazon.com/images/I/41yTVMm1DoL._AC_SY200_.jpg"/>  
                                               </a>
                                             </div>
                                             <div class="col p-0  h-100 text-center">
                                               <a href="#">
-                                                <img  class="h-100" src="https://m.media-amazon.com/images/I/51V1i2dHhJL._AC_SY200_.jpg "/>
+                                                <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/51V1i2dHhJL._AC_SY200_.jpg "/>
                                               </a>
                                             </div>
                                             <div class="col p-0 h-100 text-center">
                                               <a href="#">
-                                                <img  class="h-100" src="https://m.media-amazon.com/images/I/51mZMIEd2LL._AC_SY200_.jpg "/>
+                                                <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/51mZMIEd2LL._AC_SY200_.jpg "/>
                                               </a>
                                             </div>
                                             <div class="col p-0 h-100 text-center">
                                               <a href="#">
-                                                <img  class="h-100" src="https://m.media-amazon.com/images/I/61RH5LWdzoL._AC_SY200_.jpg "/>
+                                                <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/61RH5LWdzoL._AC_SY200_.jpg "/>
                                               </a>
                                             </div>
                                             <div class="col p-0 h-100 "> <a href="#">
-                                              <img  class="h-100" src="https://m.media-amazon.com/images/I/51A7QCfQYJL._AC_SY200_.jpg "/>
+                                              <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/51A7QCfQYJL._AC_SY200_.jpg "/>
                                             </a></div>
                                             <div class="col p-0 h-100 "> <a href="#">
-                                              <img  class="h-100" src="https://m.media-amazon.com/images/I/41ElP7oKPcL._AC_SY200_.jpg "/>
+                                              <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/41ElP7oKPcL._AC_SY200_.jpg "/>
                                             </a></div>
                                             <div class="col p-0 h-100 "> <a href="#">
-                                              <img  class="h-100" src="https://m.media-amazon.com/images/I/41ElP7oKPcL._AC_SY200_.jpg "/>
+                                              <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/41ElP7oKPcL._AC_SY200_.jpg "/>
                                             </a>
                                           </div>
                                           </div></div>
@@ -882,19 +1093,19 @@
                                       <div class="carousel-item h-100" data-bs-interval="3000">
                                         <div class="w-100 h-100 bg-white">
                                             <div class="row m-0 h-100">
-                                              <div class="col p-0  h-100 text-center"><a href="#"></a> <img  class="h-100" src="https://m.media-amazon.com/images/I/51+grL76Z4L._AC_SY200_.jpg" />
+                                              <div class="col p-0  h-100 text-center"><a href="#"></a> <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/51+grL76Z4L._AC_SY200_.jpg" />
                                               </a></div>
-                                              <div class="col p-0  h-100 text-center"><a href="#"></a> <img  class="h-100" src="https://m.media-amazon.com/images/I/51Duygr3nuL._AC_SY200_.jpg "/>
+                                              <div class="col p-0  h-100 text-center"><a href="#"></a> <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/51Duygr3nuL._AC_SY200_.jpg "/>
                                               </a></div>
-                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  class="h-100" src="https://m.media-amazon.com/images/I/61Fk2x2JNhL._AC_SY200_.jpg "/>
+                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/61Fk2x2JNhL._AC_SY200_.jpg "/>
                                               </a></div>
-                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  class="h-100" src=" https://m.media-amazon.com/images/I/51tVPK5ZsxL._AC_SY200_.jpg"/>
+                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  style="height: 250px;" src=" https://m.media-amazon.com/images/I/51tVPK5ZsxL._AC_SY200_.jpg"/>
                                               </a></div>
-                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  class="h-100" src="https://m.media-amazon.com/images/I/51e42U5tSHL._AC_SY200_.jpg"/>
+                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  style="height: 250px;" src="https://m.media-amazon.com/images/I/51e42U5tSHL._AC_SY200_.jpg"/>
                                               </a></div>
-                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  class="h-100" src=" https://m.media-amazon.com/images/I/41PFGg2g7rL._AC_SY200_.jpg"/>
+                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  style="height: 250px;" src=" https://m.media-amazon.com/images/I/41PFGg2g7rL._AC_SY200_.jpg"/>
                                               </a></div>
-                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  class="h-100" src=" https://m.media-amazon.com/images/I/41he9Fa92mL._AC_SY200_.jpg"/>
+                                              <div class="col p-0 h-100 text-center"><a href="#"></a> <img  style="height: 250px;" src=" https://m.media-amazon.com/images/I/41he9Fa92mL._AC_SY200_.jpg"/>
                                               </a></div>
                                             </div>
                                     </div>
@@ -912,12 +1123,19 @@
                                   </div>
                                   <div class="R_main8 R_tbdr">main8
                                       <div class="row h-100"> 
-                                          <div class="col-8 offset-2 h-100 bg-white">main8</div>
+                                          <div class="col-8 offset-2  bg-white " style="height: 244px;"></div>
                                       </div>
                                   </div>
                               
-                                    <div class="R_main9">
-                                                main9
+                                    <div class="R_main9"> 
+                                      <div class="row m-0 h-100 ">
+                                        <div class="col ps-0 pe-2  h-100">
+                                          <div class="bg-white h-100">A</div>
+                                        </div>
+                                        <div class="col ps-2 pe-2 h-100"> <div class="bg-white h-100">A</div></div>
+                                        <div class="col ps-2 pe-2 h-100"> <div class="bg-white h-100">A</div></div>
+                                        <div class="col ps-2 pe-0  h-100"> <div class="bg-white h-100">A</div></div>
+                                      </div>
                                     </div>
                                       
                                         <div class="R_main10 R_tbdr">main10
